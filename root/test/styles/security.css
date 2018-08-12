@@ -1,0 +1,175 @@
+.body_cls_body {
+  width: 100%;
+  text-align: center;
+}
+
+/* mobile view design */
+
+@media screen and (max-width: 400px) {
+  .body_cls_body {
+    background-color: yellow;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: minmax(100px, 1fr) minmax(200px, auto) minmax(50px, 1fr);
+    grid-template-areas:
+     "header"
+     "mainbody "
+     "footer ";
+  }
+  .header_cls_header {
+    grid-area: header;
+    display: grid;
+    grid-template-columns: 50px 150px 50px;
+    height: 50px;
+    grid-template-areas: "notification brand share";
+    height: 20px;
+    justify-content: space-between;
+    justify-items: center;
+  }
+  .main_cls_mainbody {
+    grid-area: mainbody;
+    justify-self: center;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-template-areas:
+     "securityform ";
+    grid-gap: 5px;
+  }
+  .footer_cls_footer {
+    grid-area: footer;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 50px;
+    grid-template-areas:
+    "bottombar chatbox "
+  }
+  .div_cls_notification {
+    grid-area: notification;
+    width: 50px;
+  }
+  .div_cls_brandheader {
+    grid-area: brand;
+    width: 100px;
+    background-color: red;
+  }
+  .div_cls_share {
+    grid-area: share;
+  }
+  .div_cls_sidebar {
+    grid-area: bottombar;
+  }
+
+  .div_cls_security {
+    grid-area: securityform;
+  }
+  .form_cls_security {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-areas:
+    "username"
+    "password"
+    "mobileno"
+    "savebutton";
+    grid-row-gap: 40px;
+  }
+  #div_id_security_username {
+    grid-area: username;
+  }
+  #div_id_security_password {
+    grid-area: password;
+  }
+  #div_id_security_mobileno {
+    grid-area: mobileno;
+  }
+  .btn_cls_save_security {
+    grid-area: savebutton;
+  }
+
+  .div_cls_chatbox {
+    width: 100px;
+    height: 30px;
+    background-color: pink;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+/* desktop view starts here */
+
+@media screen and (min-width:400px) {
+  .body_cls_body {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 50px minmax(295px, auto) 40px;
+    grid-template-areas: "header " "mainbody " "footer ";
+    grid-gap: 5px;
+  }
+  .header_cls_header {
+    grid-area: header;
+    display: grid;
+    grid-template-columns: 50px auto 50px;
+    justify-content: space-between;
+    grid-template-areas: "notification brand share"
+  }
+  .main_cls_mainbody {
+    grid-area: mainbody;
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: ". securityform";
+    grid-gap: 5px;
+  }
+  .footer_cls_footer {
+    grid-area: footer;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: "foot";
+    justify-items: end;
+    align-items: end;
+  }
+  .div_cls_notification {
+    overflow-x: scroll;
+    width: 100px;
+    background-color: orange;
+    grid-area: notification;
+  }
+  .div_cls_brandheader {
+    width: 500px;
+    background-color: blue;
+    grid-area: brand;
+  }
+  .div_cls_share {
+    background-color: brown;
+    width: 100px;
+    grid-area: share;
+  }
+  .div_cls_security {
+    grid-area: securityform;
+  }
+  .form_cls_security {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-areas: "username" "password" "mobileno" "savebutton";
+    grid-row-gap: 40px;
+  }
+  #div_id_security_username {
+    grid-area: username;
+  }
+  #div_id_security_password {
+    grid-area: password;
+  }
+  #div_id_security_mobileno {
+    grid-area: mobileno;
+  }
+  .btn_cls_save_security {
+    grid-area: savebutton;
+  }
+}

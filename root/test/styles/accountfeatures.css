@@ -1,0 +1,197 @@
+.body_cls_body {
+  width: 100%;
+  text-align: center;
+}
+
+/* mobile view design */
+
+@media screen and (max-width: 400px) {
+  .body_cls_body {
+    background-color: blue;
+    display: grid;
+    grid-template-columns:auto;
+    grid-template-rows: minmax(100px, 1fr) minmax(200px, auto) minmax(50px, 1fr);
+    grid-template-areas:
+    "header"
+    "mainbody "
+    "footer ";
+  }
+  .header_cls_header {
+    grid-area: header;
+    display: grid;
+    grid-template-columns: 50px auto 50px;
+    justify-content: space-between;
+    grid-template-areas:
+     "notification brand share"
+
+  }
+  .main_cls_mainbody {
+    grid-area: mainbody;
+    display: grid;
+    grid-template-columns: 280px ;
+    grid-template-rows: auto ;
+    grid-template-areas:
+    "features " ;
+    justify-content: center;
+  }
+  .footer_cls_footer {
+    grid-area: footer;
+    display: grid ;
+    grid-template-columns: 2fr 1fr ;
+    grid-template-rows: 50px ;
+    grid-template-areas:
+    "bottombar chatbox "
+  }
+  .div_cls_notification {
+    grid-area: notification;
+  }
+  .div_cls_brandheader{
+    grid-area: brand;
+  }
+  .div_cls_share {
+    grid-area: share;
+  }
+  .div_cls_sidebar {
+    grid-area: bottombar;
+  }
+
+  .div_cls_account_features {
+    grid-area: features;
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    grid-template-rows: 1fr 1fr ;
+    grid-template-areas:
+    "myorder security "
+    "mywallet myprofile";
+    justify-items:center;
+    align-items: center;
+
+  }
+  .div_cls_account_feature_single {
+    font-size: 12px;
+    width: 50px;
+    height: 60px;
+    background-color: skyblue;
+    text-align: center;
+  }
+  #div_id_account_feature_order {
+    grid-area: myorder;
+  }
+
+  #div_id_account_feature_wallet {
+    grid-area: mywallet;
+  }
+
+  #div_id_account_feature_profile {
+    grid-area: myprofile;
+  }
+
+  #div_id_account_feature_security {
+    grid-area: security;
+  }
+
+}
+
+
+
+
+/* ------------------------------------------------------------ */
+
+
+
+
+
+
+
+
+/* desktop view starts here */
+@media screen and (min-width: 400px) {
+.body_cls_body {
+  background-color: green;
+  display: grid;
+  grid-template-columns: 50px auto 50px;
+  grid-template-rows: 50px minmax(295px, auto) 40px;
+  grid-template-areas: "header header header" "mainbody mainbody mainbody" "footer footer footer";
+  grid-gap: 5px;
+}
+
+.header_cls_header {
+  grid-area: header;
+  display: grid;
+  grid-template-columns: 50px auto 50px;
+  justify-content: space-between;
+  grid-template-areas: "notification brand share";
+}
+
+.main_cls_mainbody {
+  grid-area: mainbody;
+  display: grid;
+  grid-template-columns: 50px 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: ". features" ". features";
+  grid-gap: 5px;
+}
+
+.footer_cls_footer {
+  grid-area: footer;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas: "foot";
+  justify-items: end;
+  align-items: end;
+}
+
+.div_cls_notification {
+  overflow-x: scroll;
+  width: 100px;
+  background-color: orange;
+  grid-area: notification;
+}
+
+.div_cls_brandheader {
+  width: 500px;
+  background-color: blue;
+  grid-area: brand;
+}
+
+.div_cls_share {
+  background-color: brown;
+  width: 100px;
+  grid-area: share;
+}
+
+.div_cls_account_features {
+  grid-area: features;
+  display: grid;
+  grid-template-columns: 50px 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+   ". myorder security"
+   ". mywallet profileinfo";
+  justify-items: center;
+  grid-gap: 5px;
+}
+
+.div_cls_account_feature_single {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  text-align: center;
+}
+
+#div_id_account_feature_order {
+  grid-area: myorder;
+}
+
+#div_id_account_feature_wallet {
+  grid-area: mywallet;
+}
+
+#div_id_account_feature_profile {
+  grid-area: profileinfo;
+}
+
+#div_id_account_feature_security {
+  grid-area: security;
+}
+}

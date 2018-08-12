@@ -1,0 +1,146 @@
+.body_cls_body {
+  width: 100%;
+  text-align: center;
+
+}
+
+/* mobile view design */
+
+@media screen and (max-width: 400px){
+  .body_cls_body {
+    background-color: yellow;
+    display: grid;
+    grid-template-columns:auto;
+    grid-template-rows: minmax(100px, 1fr) minmax(200px, auto) minmax(50px, 1fr);
+    grid-template-areas:
+    "header"
+    "mainbody "
+    "footer ";
+  }
+  .header_cls_header {
+    grid-area: header;
+    display: grid;
+    grid-template-columns: 50px 100px 50px;
+    grid-template-areas:
+     "notification brand share" ;
+  }
+  .main_cls_mainbody {
+    grid-area: mainbody;
+    display: grid;
+    grid-template-columns:  minmax(250px,300px);
+    grid-template-rows: 300px ;
+    grid-template-areas:
+    "ordertable" ;
+    font-size: 10px;
+    justify-content: center;
+  }
+  .footer_cls_footer {
+    grid-area: footer;
+    display: grid ;
+    grid-template-columns: 2fr 1fr ;
+    grid-template-rows: 50px ;
+    grid-template-areas:
+    "bottombar chatbox " ;
+  }
+  .div_cls_notification {
+    grid-area: notification;
+    width: 50px;
+  }
+  .div_cls_brandheader{
+    grid-area: brand;
+    width: 100px;
+
+  }
+  .div_cls_share {
+    grid-area: share;
+    width: 100px;
+
+  }
+ .table_cls_order_table{
+   width: 300px ;
+
+ }
+  .div_cls_order_table{
+    max-width: 300px ;
+    max-height: 300px ;
+    grid-area: ordertable;
+  }
+  .div_cls_chatbox{
+    width: 150px;
+    height: 50px;
+    background-color: violet;
+}
+}
+
+
+
+
+
+
+
+
+/* desktop view starts here */
+
+.body_cls_body {
+  display: grid;
+  grid-template-columns: 50px auto 50px;
+  grid-template-rows: 50px minmax(295px, auto) 40px;
+  grid-template-areas:
+   "header header header"
+    "mainbody mainbody mainbody"
+    "footer footer footer";
+    grid-gap: 5px;
+}
+
+.header_cls_header {
+  grid-area: header;
+  display: grid;
+  grid-template-columns: 50px auto 50px;
+  justify-content: space-between;
+  grid-template-areas:
+   "notification brand share"
+}
+
+.main_cls_mainbody {
+  grid-area: mainbody;
+  display: grid;
+  grid-template-columns: 50px 1fr;
+  grid-template-rows: auto;
+  grid-template-areas:
+  ". ordertable"  ;
+  grid-gap: 5px;
+  justify-items: center;
+}
+
+.footer_cls_footer {
+  grid-area: footer;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+  "foot";
+  justify-items: end;
+  align-items: end;
+}
+
+.div_cls_notification {
+  overflow-x: scroll;
+  width: 100px;
+  background-color: orange;
+  grid-area: notification;
+}
+
+.div_cls_brandheader {
+  width: 500px;
+  background-color: blue;
+  grid-area: brand;
+}
+
+.div_cls_share {
+  background-color: brown;
+  width: 100px;
+  grid-area: share;
+}
+
+.div_cls_order_table{
+  grid-area: ordertable;
+}
