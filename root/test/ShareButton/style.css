@@ -1,3 +1,4 @@
+/* Styles for share Button */
 .share-button {
   width: 60px;
   height: 60px;
@@ -16,13 +17,20 @@
   transition: all .4s;
 
 }
+/* Hover effect for share button */
+.share-button:hover {
+  background: white;
+  color: #E91E63;
+  box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.28), 0 4px 15px 0 rgba(0, 0, 0, 0.25);
+}
 
+/* Styles for all Links(a) */
 .share-button a{
   height: 0px;
   width: 0px;
   opacity:0;
   text-align: center;
-  line-height: 32px;
+  line-height: 38px;
   color: white;
   border-radius: 50;
   font-size: 16px;
@@ -34,6 +42,14 @@
   z-index: -9;
 }
 
+/* To bring share icon to required position */
+.zmdi-share {
+  padding-right:15px;
+  padding-top: 27px;
+}
+
+
+/* Adding colors to each links and setting transition delay */
 .share-button a:nth-child(2){
   background: #55acee;
   transition-delay: 0.3s;
@@ -51,6 +67,7 @@
   transition-delay: 0.6s;
 }
 
+/* Make links visible after hovering on share buttoon */
 .share-button:hover a{
   opacity: 1;
   height: 35px;
@@ -58,25 +75,45 @@
   border-radius: 50%;
   z-index: -1;
 }
+
+/* Shadow hover effect for all links(a) */
 .share-button a:hover {
+  background: white;
   box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.28), 0 4px 15px 0 rgba(0, 0, 0, 0.25);
 }
 
+/* position of each links(a) and backround and icon color change after hovering on share button */
 .share-button:hover a:nth-child(2){
  right: 95px;
  top: 21px;
+ }
+.share-button:hover a:nth-child(2):hover{
+  color: #55acee;
 }
+
 
 .share-button:hover a:nth-child(3){
  right: 83px;
  top: 55px;
 }
+.share-button:hover a:nth-child(3):hover{
+color: #355a98;
+}
+
+
 .share-button:hover a:nth-child(4){
  right: 58px;
  top: 80px;
 }
+.share-button:hover a:nth-child(4):hover{
+color: green;
+}
+
+
 .share-button:hover a:nth-child(5){
  right: 23px;
  top:90px;
 }
-
+.share-button:hover a:nth-child(5):hover{
+ color: #CC181E ;
+}
