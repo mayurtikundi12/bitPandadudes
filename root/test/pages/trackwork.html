@@ -1,60 +1,64 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>track work Pandadudes</title>
-    <link rel="stylesheet" href="../styles/trackwork.css">
-  </head>
-  <body class="body_cls_body">
-    <!-- header having brand name,share and notification options starts here -->
-    <header class="header_cls_header">
-      <!-- the notification option starts here  -->
-      <div class="div_cls_notification"> notificationelement code here </div>
-      <!-- the notification option ends here  -->
 
-      <!-- the brand name div starts here -->
-      <div class="div_cls_brandheader">
-        <p id="p_id_brandheader" class="p_cls_brandname">Pandadudes</p>
-      </div>
-      <!-- the brand name div ends here -->
+<head>
+  <meta charset="utf-8">
+  <title>track work Pandadudes</title>
+  <link rel="stylesheet" href="../styles/trackwork.css">
+</head>
 
-      <!-- the share div starts here -->
-      <div class="div_cls_share">
-        <p id="p_id_share" class="p_cls">share</p>
-      </div>
-      <!-- the share div ends here -->
-</header>
-<!-- header ends here -->
+<body class="body_cls_body">
+  <!-- header having brand name,share and notification options starts here -->
+  <header class="header_cls_header">
+    <!-- the notification option starts here  -->
+    <div class="div_cls_notification"> notificationelement code here </div>
+    <!-- the notification option ends here  -->
 
-      <!-- main body starts here contains sidebar ,main content having progress bar and description -->
-<main class="main_cls_mainbody">
-  <!-- div contains progress heading and progress bar -->
-  <div class="div_cls_progress">
-  <p>progress</p>
-  <!--  progress bar starts here-->
-  <progress id="progress_id_progress_bar" max="100" value="80"></progress>
-  <!--  progress bar ends here-->
-  </div>
-
-  <!-- this div will contain all the progress details when clicked on the button -->
-  <div class="div_cls_progress_details">
-    <button type="button" name="btn_details">details</button>
-    <!-- details div will start here -->
-    <div class="div_cls_progress_inner_details" id="div_id_progress_inner_details">
-      <p>inner details will be shown  in this box</p>
+    <!-- the brand name div starts here -->
+    <div class="div_cls_brandheader">
+      <p id="p_id_brandheader" class="p_cls_brandname">Pandadudes</p>
     </div>
-    <!-- details div ends here -->
-  </div>
-</main>
-<!-- main body ends here -->
+    <!-- the brand name div ends here -->
 
-<!-- the footer part starts here -->
+    <!-- the share div starts here -->
+    <div class="div_cls_share">
+      <p id="p_id_share" class="p_cls">share</p>
+    </div>
+    <!-- the share div ends here -->
+  </header>
+  <!-- header ends here -->
+
+  <!-- main body starts here contains sidebar ,main content having progress bar and description -->
+  <main class="main_cls_mainbody">
+    <!-- div contains progress heading and progress bar -->
+    <div class="div_cls_progress">
+      <p id="p_id_progress_text">progress</p>
+      <!--  progress bar starts here-->
+      <progress id="progress_id_progress_bar" max="100" value="80"></progress>
+      <!--  progress bar ends here-->
+    </div>
+
+    <!-- this div will contain all the progress details when clicked on the button -->
+    <div class="div_cls_progress_details">
+      <button type="button" name="btn_details">details</button>
+      <!-- details div will start here -->
+      <div class="div_cls_progress_inner_details" id="div_id_progress_inner_details">
+        <p>inner details will be shown in this box</p>
+      </div>
+      <!-- details div ends here -->
+    </div>
+  </main>
+  <!-- main body ends here -->
+
+  <!-- the footer part starts here -->
   <footer class="footer_cls_footer">
-<!-- the chat option starts here -->
-<div class="div_cls_chatbox">chatbox</div>
-<!-- the chat option ends here  -->
-<!-- the footer part starts here -->
-
+    <!-- the chat option starts here -->
+    <div class="div_cls_chatbox">chatbox</div>
+    <!-- the chat option ends here  -->
+    <!-- the footer part starts here -->
   </footer>
-  </body>
+
+  <script src="../logic/trackwork.js" charset="utf-8"></script>
+</body>
+
 </html>

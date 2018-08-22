@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="../styles/newwork.css">
 </head>
 
-<body class="body_cls_body" >
+<body class="body_cls_body">
   <!-- header having brand name,share and notification options starts here -->
   <header class="header_cls_header">
     <!-- the notification option starts here  -->
@@ -29,76 +29,78 @@
   </header>
   <!-- header  ends here -->
 
-<!-- main starts here contains form to get new work data -->
-<main class="main_cls_mainbody">
-<!-- form div starts here for new work details  -->
-<div class="div_cls_newwork" >
-  <div class="div_cls_form_steps">
-    <button class="btn_cls_form_step" type="button" name="btn_form_step">step1</button>
-    <button type="btn_cls_form_step" name="btn_form_step">step2</button>
-    <button type="btn_cls_form_step" name="btn_form_step">step3</button>
-  </div>
+  <!-- main starts here contains form to get new work data -->
+  <main class="main_cls_mainbody">
+    <!-- form div starts here for new work details  -->
+    <div class="div_cls_newwork">
+      <div class="div_cls_form_steps">
+        <button class="btn_cls_form_step" type="button" name="btn_form_step">step1</button>
+        <button type="btn_cls_form_step" name="btn_form_step">step2</button>
+        <button type="btn_cls_form_step" name="btn_form_step">step3</button>
+      </div>
 
-  <!-- actual form starts here -->
-  <form class="form_cls_newwork"  method="post">
+      <!-- actual form starts here -->
+      <form class="form_cls_newwork" id="form_id_newwork" method="post">
 
-    <!-- div for step 1 form details gathering starts here -->
-    <div class="div_cls_form" id="div_id_form_step1">
-      <!-- work title -->
-      <label for="work_title">Work Title</label>
-      <input type="text" name="work_title" value="work_title">
+        <!-- div for step 1 form details gathering starts here -->
+        <div class="div_cls_form" id="div_id_form_step1">
+          <!-- work title -->
+          <label for="work_title">Work Title</label>
+          <input type="text" id="inp_id_work_title" name="work_title" value="work_title">
 
-      <!-- work expected time deadline -->
-      <label for="work_deadline">Work Deadline</label>
-      <input type="date" name="work_deadline" >
+          <!-- work expected time deadline -->
+          <label for="work_deadline">Work Deadline</label>
+          <input type="date"id="inp_id_work_deadline" name="work_deadline">
 
-      <!-- work submission url -->
-      <label for="work_submission_url">Work Submission URL</label>
-      <input type="url" name="work_submission_url" >
+          <!-- work submission url -->
+          <label for="work_submission_url">Work Submission URL</label>
+          <input type="url" id="inp_id_work_submission_url" name="work_submission_url">
+        </div>
+        <!-- div for step 1 form details gathering ends here -->
+
+
+        <!-- div for step 2 form details gathering starts here -->
+        <div class="div_cls_form" id="div_id_form_step2">
+
+          <!-- work details -->
+          <label for="work_details">Work Details</label>
+          <textarea name="work_details" id="inp_id_work_details" placeholder="please write complete details"></textarea>
+
+          <!-- work upload related files -->
+          <p>uplaod project related files or study material</p>
+          <label for="work_file upload">Uplaoad</label>
+          <input type="file" id="inp_id_upload_file" name="upload">
+        </div>
+        <!-- div for step 2 form details gathering ends here -->
+
+        <!-- div for step 3 form details gathering starts here -->
+        <div class="div_cls_form" id="div_id_form_step3">
+          <!-- work special reuirements -->
+          <label for="work_special_request">Special Requests</label>
+          <textarea id="inp_id_special_request" name="work_special_request" placeholder="please write any special requirements that you want to benefit"></textarea>
+        </div>
+        <!-- div for step 3 form details gathering ends here -->
+
+        <button type="submit" name="sumbit_work" id="btn_id_submit_newwork">next</button>
+      </form>
+      <!-- actual form ends here -->
     </div>
-    <!-- div for step 1 form details gathering ends here -->
+    <!-- form div ends here -->
+  </main>
+  <!-- main ends here -->
 
 
-    <!-- div for step 2 form details gathering starts here -->
-    <div class="div_cls_form" id="div_id_form_step2">
-
-    <!-- work details -->
-    <label for="work_details">Work Details</label>
-    <textarea name="work_details" placeholder="please write complete details"></textarea>
-
-    <!-- work upload related files -->
-    <p>uplaod project related files or study material</p>
-    <label for="work_file upload">Uplaoad</label>
-    <input type="file" name="upload" >
-  </div>
-    <!-- div for step 2 form details gathering ends here -->
-
-    <!-- div for step 3 form details gathering starts here -->
-    <div class="div_cls_form" id="div_id_form_step3" >
-
-    <!-- work special reuirements -->
-    <label for="work_special_request">Special Requests</label>
-    <textarea name="work_special_request" placeholder="please write any special requirements that you want to benefit"></textarea>
-  </div>
-    <!-- div for step 3 form details gathering ends here -->
-  </form>
-  <!-- actual form ends here -->
-</div>
-<!-- form div ends here -->
-</main>
-<!-- main ends here -->
-
-
-<!-- the footer part starts here -->
+  <!-- the footer part starts here -->
   <footer class="footer_cls_footer">
-<!-- the chat option starts here -->
-<div class="div_cls_chatbox">
+    <!-- the chat option starts here -->
+    <div class="div_cls_chatbox">
 
-</div>
-<!-- the chat option ends here  -->
+    </div>
+    <!-- the chat option ends here  -->
   </footer>
   <!-- the footer part ends here -->
 
+<script src="../logic/newwork.js" charset="utf-8"></script>
 </body>
 
 </html>

@@ -41,28 +41,28 @@
     <!-- college info form starts here -->
     <div class="div_cls_profile_college">
       <form class="form_cls_profile_college_info" method="post">
-        <div class="div_cls_college_info" id="div_id_college_name">
+        <div class="div_cls_college_info" >
           <label for="college_name">college name</label>
-          <input type="text" name="college_name" placeholder="college name">
+          <input id="inp_id_college_name" type="text" value="" name="college_name" placeholder="college name">
         </div>
 
-        <div class="div_cls_college_info" id="div_id_education">
+        <div class="div_cls_college_info" >
           <label for="college_name">current education level</label>
-          <input type="text" name="college_name" placeholder="eg . BTech , Masters,Phd etc">
+          <input id="inp_id_education" type="text" value="" name="college_name" placeholder="eg . BTech , Masters,Phd etc">
         </div>
 
 
-        <div class="div_cls_college_info" id="div_id_courses">
+        <div class="div_cls_college_info" >
           <label for="courses">courses</label>
-          <input type="text" name="courses" placeholder="current courses">
+          <input id="inp_id_courses" type="text" value="" name="courses" placeholder="current courses">
         </div>
 
-        <div class="div_cls_college_info" id="div_id_semester">
+        <div class="div_cls_college_info" >
           <label for="semester">semester</label>
-          <input type="text" name="semester" placeholder="semester">
+          <input id="inp_id_semester" type="text" value="" name="semester" placeholder="semester">
         </div>
 
-        <button type="button" name="button">Save</button>
+        <button type="button" name="button" id="btn_id_save_info">Save</button>
       </form>
     </div>
     <!-- college info form ends here -->
@@ -78,6 +78,10 @@
     <!-- the chat option ends here  -->
   </footer>
   <!-- the footer part ends here -->
+
+  <script type="text/javascript" src="../logic/profile.js">
+
+  </script>
 </body>
 
 </html>

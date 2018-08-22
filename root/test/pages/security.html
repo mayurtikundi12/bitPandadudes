@@ -33,27 +33,32 @@
     <div class="div_cls_security">
       <form class="form_cls_security" method="post">
         <!-- username starts here -->
-        <div class="div_cls_security_form_element" id="div_id_security_username">
-          <label for="username">Username</label>
-          <input type="text" name="username" placeholder="username" >
-        </div>
+        <p>username here</p>
         <!-- username ends here -->
+
+        <!-- old password starts here -->
+        <div class="div_cls_security_form_element" id="div_id_security_old_password">
+          <label for="old_password">Old Password</label>
+          <input id="inp_id_old_password" type="text" name="old_password" placeholder="old password" >
+        </div>
+        <!-- old password ends here -->
+
 
         <!-- password starts here -->
         <div class="div_cls_security_form_element" id="div_id_security_password">
-          <label for="password">Password</label>
-          <input type="text" name="password" placeholder="password" >
+          <label for="password">New Password</label>
+          <input id="inp_id_new_password" type="text" name="password" placeholder="password" >
         </div>
         <!-- password ends here -->
 
         <!-- mobile number starts here -->
         <div class="div_cls_security_form_element" id="div_id_security_mobileno">
           <label for="mobileno">Mobile Number</label>
-          <input type="number" name="mobileno" placeholder="write with country code" >
+          <input id="inp_id_mobileno" type="number" name="mobileno" placeholder="write with country code" >
         </div>
         <!-- mobile number ends here -->
 
-        <button class="btn_cls_save_security" type="button" name="savechanges">Save Changes</button>
+        <button id="btn_id_save_security" type="button" name="savechanges">Save Changes</button>
       </form>
     </div>
   </main>
@@ -68,6 +73,11 @@
     <!-- the chat option ends here  -->
   </footer>
   <!-- the footer part ends here -->
+
+
+  <script type="text/javascript" src="../logic/security.js">
+
+  </script>
 </body>
 
 </html>

@@ -36,7 +36,7 @@
     grid-template-areas:
     " newworkform " ;
     justify-content: center;
-  }
+    }
   .footer_cls_footer {
     grid-area: footer;
     display: grid ;
@@ -67,7 +67,7 @@
     flex-direction: row;
     /* justify-content: space-around; */
   }
-  .div_cls_form_steps{
+  .form_cls_newwork{
     grid-area: newworkform;
     font-size: 10px ;
     display: grid;
@@ -76,13 +76,12 @@
     grid-template-areas:
     " stepbutton "
     " form " ;
+    justify-items: center;
 
   }
   .div_cls_form_steps{
     grid-area: stepbutton;
-    display: flex;
-    flex-direction: row;
-    }
+      }
   .form_cls_newwork{
     grid-area: form;
     }
@@ -178,11 +177,11 @@ grid-area: notification;
   grid-template-areas:
   "button"
   "form";
+  justify-content: center;
 }
 .div_cls_form_steps{
   grid-area: button;
-  display: flex;
-  flex-direction: row;
+
   /* justify-content: space-around; */
 }
 .form_cls_newwork{
@@ -194,5 +193,8 @@ grid-area: notification;
   width: 200px;
   height: 30px;
   background-color: pink;
+}
+#btn_id_submit_newwork{
+  
 }
 }
