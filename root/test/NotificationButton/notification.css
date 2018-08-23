@@ -1,0 +1,88 @@
+/* Setting margin and padding to 0px for whole page */
+*{
+  margin: 0px;
+  padding: 0px;
+}
+
+/* Styles of Notification  */
+.notification {
+  display: inline-block;;
+  height: 60px;
+  width: 60px;
+  background: rgb(50, 127, 217);
+  border-radius: 50%;
+  font-size: 22px;
+  position: relative;
+ text-align: center;
+  line-height: 60px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26), 0 2px 10px 0 rgba(0, 0, 0, 0.22);
+  margin-top: -20px;
+  margin-left: -20px;
+}
+/* Styles of Badge  */
+.notification .badge {
+  text-align: center;
+  line-height: 5px;
+  position: absolute;
+  font-size: 15px;
+  color: white;
+  background-color:rgb(50, 127, 217);
+  top: 20px;
+  border-radius: 50%;
+  padding: 10px 5px;
+  border: .1em solid white;
+}
+
+/* Setting notification icon color to white  */
+.notification a {
+  color: white;
+}
+
+/* Bringing notification icon to required position */
+.zmdi-notifications {
+  padding-left: 12px;
+  padding-top: 27px;
+
+}
+
+/* Animating Notification icon using keyframes */
+@keyframes ring {
+    0% {
+        -webkit-transform: rotate(35deg);
+        transform: rotate(35deg);
+    }
+    12.5% {
+        -webkit-transform: rotate(-30deg);
+        transform: rotate(-30deg);
+    }
+    25% {
+        -webkit-transform: rotate(25deg);
+        transform: rotate(25deg);
+    }
+    37.5% {
+        -webkit-transform: rotate(-20deg);
+        transform: rotate(-20deg);
+    }
+    50% {
+        -webkit-transform: rotate(15deg);
+        transform: rotate(15deg);
+    }
+    62.5% {
+        -webkit-transform: rotate(-10deg);
+        transform: rotate(-10deg);
+    }
+    75% {
+        -webkit-transform: rotate(5deg);
+        transform: rotate(5deg);
+    }
+    100% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+}
+
+/* Applying keyframes to notification icon */
+.zmdi-notifications:hover {
+  animation-name: ring;
+  animation-duration: 1s;
+}
