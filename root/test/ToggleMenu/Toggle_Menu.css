@@ -1,0 +1,48 @@
+.fa {
+  position: relative;;
+  font-size: 40px;
+  float: left;
+}
+
+.btn {
+  width: 70px;
+  list-style: none;
+  padding: 5px;
+  border-bottom: 1px solid #858fa6;
+  color: white;
+}
+
+#arrow{
+  float: right;
+  position: relative;
+  padding-top: 50%;
+
+}
+#menu {
+position: fixed;
+height: 50px;
+width: 150px;
+top: 40%;
+
+}
+
+ul {
+  border-radius: 3px;
+  background-image: radial-gradient(circle 248px at center, #16d9e3 0%, #30c7ec 47%, #46aef7 100%);
+}
+.link {
+  float: left;
+  height: 140px;
+}
+
+.show, .hide{
+    /* we specify the transition length for hiding and showing */
+            transition: left .2s ease-in;
+
+}
+.hide {
+  left: -120px;
+}
+.show {
+  left: -40px;
+}
