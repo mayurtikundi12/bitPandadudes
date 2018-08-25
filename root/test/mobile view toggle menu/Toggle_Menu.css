@@ -1,0 +1,65 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+.fa-chevron-up{
+  font-size: 35px;
+}
+.fa-chevron-down{
+  font-size: 35px;
+}
+
+#menu {
+  position: fixed;
+  display: inline;
+  position: fixed;
+  left: 50%;
+  transform: translate(-50% , 0);
+
+}
+
+#arrow{
+  color: white;
+position: fixed;
+background-color: red;
+top: -18%;
+left: 50%;
+transform: translate(-50%,0);
+padding: 10px;
+padding-top: 0px;
+border-top-right-radius: 50px;
+border-top-left-radius: 50px;
+/* z-index: -1; */
+
+}
+
+.btn_ul li {
+  list-style: none;
+  padding: 5px;
+  border-bottom: 1px solid #858fa6;
+  color: black;
+}
+.link {
+  width: 90px;
+  position: relative;
+  display: inline-block;
+  float: left;
+  background-color: rgb(68, 217, 43);
+  border-radius: 5px;
+  z-index: 2;
+}
+.btn_ul li:nth-child(6){
+  border-bottom: 0px;
+}
+
+.showUp, .hideDown{
+    /* we specify the transition length for hiding and showing */
+            transition: all .3s ease-in;
+}
+.hideDown {
+  bottom:-161px;
+}
+.showUp {
+  bottom: 0px;
+}
