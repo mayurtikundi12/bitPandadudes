@@ -1,0 +1,473 @@
+/* Setting margin and padding to 0px for whole page */
+*{
+  margin: 0px;
+  padding: 0px;
+}
+
+/* --------------------------------------------------------------------------- */
+/* --------------------------------------------------------------------------- */
+/* --------------------------------------------------------------------------- */
+/* --------------------------------------------------------------------------- */
+/* media query for different size screens */
+
+/* mobile view design starts here */
+@media screen and (max-width: 400px){
+
+  .header_cls_header {
+    margin-top: 0px;
+    display: flex;
+    flex-direction: column;
+  }
+  .div_cls_notification {
+    width: 100px;
+    background-color: orange;
+    position: absolute;
+    word-wrap: break-word;
+    left: 0px;
+    top: 0px;
+    }
+
+  #div_id_brandheader{
+    width: 40%;
+    height: 8% ;
+    max-height: 45px ;
+    background-color: #6bc8ff;
+    color: white ;
+    border-radius: 0px 0px 5px 5px;
+    border-style:  solid ;
+    border-color: rgb(255, 20, 20);
+    border-width: 0px 2px 2px 2px ;
+    left: 50% ;
+    position: absolute;
+    transform: translateX(-50%);
+    margin-top: 0px;
+  }
+  .div_cls_brandheader p {
+    position: relative;
+    margin-top: 6% ;
+    color: black;
+
+    }
+  .div_cls_brandheader:hover{
+    box-shadow: 0px 2px 3px 1px rgb(255, 133,0);
+    background-color: rgb(0, 255, 229);
+  }
+
+  .div_cls_share {
+
+  }
+}
+
+
+
+
+/* --------------------------------------------------------------------------------- */
+
+/* deskstop view starts here for the header and for menu button */
+
+@media screen and (min-width: 400px){
+
+  .header_cls_header{
+    height: 100px;
+    }
+
+
+    .div_cls_notification{
+      width: 100px;
+      background-color: orange;
+      position: absolute;
+      word-wrap: break-word;
+      left: 0px;
+      top: 0px;
+    }
+    .div_cls_brandheader{
+      width: 40%;
+      height: 10% ;
+      background-color: #6bc8ff;
+      color: white ;
+      border-radius: 0px 0px 5px 5px;
+      border-style:  solid ;
+      border-color: rgb(255, 20, 20);
+      border-width: 0px 2px 2px 2px ;
+      left: 50% ;
+      margin-top: 0 ;
+      position: absolute;
+      transform: translateX(-50%);
+      }
+    .div_cls_brandheader p {
+      position: relative;
+      margin-top: 2% ;
+      color: black;
+      font-size: 1.5rem ;
+
+      }
+    .div_cls_brandheader:hover{
+    box-shadow: 0px 2px 3px 1px rgb(255, 133,0);
+    background-color: rgb(0, 255, 229)
+    }
+
+    .div_cls_share{
+      background-color: brown;
+    }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* --------------------------------------------------------------------------- */
+/* --------------------------------------------------------------------------- */
+/* --------------------------------------------------------------------------- */
+/* --------------------------------------------------------------------------- */
+
+
+/* Styles of notification  */
+.div_cls_notification {
+  display: inline-block;;
+  height: 60px;
+  width: 60px;
+  background: rgb(50, 127, 217);
+  border-radius: 50%;
+  font-size: 22px;
+  position: absolute;
+ text-align: center;
+  line-height: 60px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26), 0 2px 10px 0 rgba(0, 0, 0, 0.22);
+  margin-top: -20px;
+  margin-left: -20px;
+  z-index: 2;
+}
+
+/* Styles of Badge  */
+.div_cls_notification .badge {
+  text-align: center;
+  line-height: 2px;
+  position: absolute;
+  font-size: 15px;
+  color: white;
+  background-color:rgb(50, 127, 217);
+  top: 20px;
+  border-radius: 50%;
+  padding: 10px 5px;
+  border: .1em solid white;
+}
+
+/* Setting notification icon color to white  */
+  .div_cls_notification a {
+  color: white;
+}
+
+/* Bringing notification icon to required position */
+.zmdi-notifications {
+  padding-left: 12px;
+  padding-top: 27px;
+  margin-right:2px ;
+}
+
+
+
+/* Animating notification icon using keyframes */
+@keyframes ring {
+    0% {
+        -webkit-transform: rotate(35deg);
+        transform: rotate(35deg);
+    }
+    12.5% {
+        -webkit-transform: rotate(-30deg);
+        transform: rotate(-30deg);
+    }
+    25% {
+        -webkit-transform: rotate(25deg);
+        transform: rotate(25deg);
+    }
+    37.5% {
+        -webkit-transform: rotate(-20deg);
+        transform: rotate(-20deg);
+    }
+    50% {
+        -webkit-transform: rotate(15deg);
+        transform: rotate(15deg);
+    }
+    62.5% {
+        -webkit-transform: rotate(-10deg);
+        transform: rotate(-10deg);
+    }
+    75% {
+        -webkit-transform: rotate(5deg);
+        transform: rotate(5deg);
+    }
+    100% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+}
+
+/* Applying keyframes to notification icon */
+.zmdi-notifications:hover {
+  animation-name: ring;
+  animation-duration: 1s;
+}
+
+
+.div_cls_msg_container::-webkit-scrollbar {
+  display: none;
+}
+
+.div_cls_msg_container{
+  position: absolute;
+  background-color: red ;
+  z-index: 1;
+  border-radius: 0px 0px 3px 3px ;
+  opacity: 0.8 ;
+  height: 25% ;
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+}
+
+.a_cls_notf_msg{
+ display: block;
+ padding: 5px ;
+ width: 150px;
+ border-bottom: 1px solid brown ;
+  }
+.a_cls_notf_msg:hover{
+  background-color: rgb(244, 119, 66) ;
+}
+
+
+
+
+
+/* ---------------------------------------------------- */
+
+
+
+
+
+
+/* Styles for share Button */
+.div_cls_share {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #E91E63;
+  color: white;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26), 0 2px 10px 0 rgba(0, 0, 0, 0.22);
+  cursor: pointer;
+  position: fixed;
+  right: -20px;
+  top: -20px;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 20px;
+  line-height: 70px;
+  transition: all .4s;
+
+}
+/* Hover effect for share button */
+.div_cls_share:hover {
+  background: white;
+  color: #E91E63;
+  box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.28), 0 4px 15px 0 rgba(0, 0, 0, 0.25);
+}
+
+/* Styles for all Links(a) */
+.div_cls_share a{
+  height: 0px;
+  width: 0px;
+  opacity:0;
+  text-align: center;
+  line-height: 38px;
+  color: white;
+  border-radius: 50;
+  font-size: 16px;
+  transition: all .4s;
+  position: absolute;
+  right: 30px;
+  top: 30px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26), 0 2px 10px 0 rgba(0, 0, 0, 0.22);
+  z-index: -9;
+}
+
+/* To bring share icon to required position */
+.zmdi-share {
+  padding-right:15px;
+  padding-top: 27px;
+}
+
+
+/* Adding colors to each links and setting transition delay */
+.div_cls_share a:nth-child(2){
+  background: #55acee;
+  transition-delay: 0.3s;
+}
+.div_cls_share a:nth-child(3){
+  background: #355a98;
+  transition-delay: 0.4s;
+}
+.div_cls_share a:nth-child(4){
+  background: green;
+  transition-delay: 0.5s;
+}
+.div_cls_share a:nth-child(5){
+  background: #CC181E;
+  transition-delay: 0.6s;
+}
+
+/* Make links visible after hovering on share buttoon */
+.div_cls_share:hover a{
+  opacity: 1;
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  z-index: -1;
+}
+
+/* Shadow hover effect for all links(a) */
+.div_cls_share a:hover {
+  background: white;
+  box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.28), 0 4px 15px 0 rgba(0, 0, 0, 0.25);
+}
+
+/* position of each links(a) and backround and icon color change after hovering on share button */
+.div_cls_share:hover a:nth-child(2){
+ right: 95px;
+ top: 21px;
+ }
+.div_cls_share:hover a:nth-child(2):hover{
+  color: #55acee;
+}
+
+
+.div_cls_share:hover a:nth-child(3){
+ right: 83px;
+ top: 55px;
+}
+.div_cls_share:hover a:nth-child(3):hover{
+color: #355a98;
+}
+
+
+.div_cls_share:hover a:nth-child(4){
+ right: 58px;
+ top: 80px;
+}
+.div_cls_share:hover a:nth-child(4):hover{
+color: green;
+}
+
+
+.div_cls_share:hover a:nth-child(5){
+ right: 23px;
+ top:90px;
+}
+.div_cls_share:hover a:nth-child(5):hover{
+ color: #CC181E ;
+}
+
+
+
+
+
+
+
+
+
+/* ---------------------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------------- */
+
+
+/* menu css also added with the header only since it is also same for all the pages */
+
+
+/* mobile view for the menu bar starts here */
+
+@media screen and (max-width: 400px){
+
+}
+/* ------------------------------------------------------------------------------ */
+
+
+/* desktop view for the menu bar  */
+@media screen and (min-width: 400px){
+.fa-chevron-right{
+  font-size: 35px;
+  /* transform: rotateY(180deg); */
+}
+.fa-chevron-left{
+  font-size: 35px;
+}
+
+
+
+#div_id_menu {
+  position: fixed;
+  display: inline;
+  position: fixed;
+  top:50%;
+  transform: translate(0 , -50%);
+  font-size: 0.9rem ;
+}
+
+#icon_id_arrow {
+  z-index: 1;
+  color: white;
+  position: fixed;
+  float: right;
+display: inline;
+top:50%;
+transform: translate(0 , -50%);
+background-color: #E91E63;
+padding: 8px;
+padding-left: 0px;
+border-top-right-radius: 50px;
+border-bottom-right-radius: 50px;
+}
+
+.btn_ul li {
+  list-style: none;
+  padding:5px ;
+  border-bottom: 1px solid #858fa6;
+  color: black;
+  text-align: left;
+}
+
+
+.btn_ul li:nth-child(6){
+  border-bottom: 0px;
+}
+.link {
+  width: 90px;
+  position: relative;
+  display: inline-block;
+  float: left;
+  background-color: rgb(68, 217, 43);
+  border-radius: 3px;
+}
+
+.div_cls_menu_show, .div_cls_menu_hide{
+    /* we specify the transition length for hiding and div_cls_menu_showing */
+            transition: left .3s ease-in;
+}
+.div_cls_menu_hide {
+  left: -90px;
+}
+.div_cls_menu_show {
+  left: 0px;
+}
+}

@@ -1,75 +1,91 @@
 .body_cls_body{
   width: 100% ;
+  height: 100% ;
+  margin: 0px ;
+  padding: 0px ;
+  overflow-x: hidden;
   text-align: center;
+  z-index: -15 ;
 }
 
 /* mobile view design */
 @media screen and (max-width: 400px){
   .body_cls_body {
-    background-color: yellow;
-    display: grid;
-    grid-template-columns:auto;
-    grid-template-rows: minmax(100px, 1fr) minmax(200px, auto) minmax(50px, 1fr);
-    grid-template-areas:
-    "header"
-    "mainbody "
-    "footer ";
+
   }
-  .header_cls_header {
-    grid-area: header;
-    display: grid;
-    grid-template-columns: 50px auto 50px;
-    grid-template-areas:
-     "notification brand share" ;
-  }
+
   .main_cls_mainbody {
-    grid-area: mainbody;
-    display: grid;
-    grid-template-columns: 140px 140px;
-    grid-template-rows: 300px ;
-    grid-template-areas:
-    "trackwork newwork" ;
-    justify-items: center;
-    justify-content: center;
+    margin-top: 40px ;
   }
   .footer_cls_footer {
-    grid-area: footer;
-    display: grid ;
-    grid-template-columns: 2fr 1fr ;
-    grid-template-rows: 50px ;
-    grid-template-areas:
-    "bottombar chatbox " ;
+    grid-area:footer;
+   position:fixed;
+   left:0px;
+   bottom:0px;
+   height:7%;
+   width:100%;
+   background:red;
   }
-  .div_cls_notification {
-    grid-area: notification;
-  }
-  .div_cls_brandheader{
-    grid-area: brand;
-  }
-  .div_cls_share {
-    grid-area: share;
-  }
+
   .div_cls_sidebar {
-    grid-area: bottombar;
+
   }
 
-.div_cls_track_work{
-  width: 100px;
-  background-color: pink;
-  grid-area: trackwork ;
-}
-.div_cls_new_work{
-  width: 100px;
-  background-color: green;
-  grid-area: newwork ;
+.div_cls_work{
+  width: 80%;
+  height: 200px ;
+  position: absolute;
+  margin-left: 50% ;
+  transform: translateX(-50%);
+
+  background-color: rgb(249, 244, 239);
+  border: 1px solid rgb(175, 168, 168);
+  border-radius: 5px;
+  box-shadow: 0px 2px 3px 1px #888888;
+  z-index: -20 ;
+  margin-top: 20px ;
+
 
 }
+#div_id_track_work{
+  position: relative;
+  margin-top: 25%; ;
+
+}
+#div_id_new_work{
+  position: relative;
+  margin-top: 20% ;
+
+}
+
 .div_cls_chatbox{
-  width: 150px;
-  height: 50px;
+  width: 40%;
+  height: 30%;
   background-color: violet;
+  visibility: hidden;
 }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* -------------------------------------------------------------- */
+/* -------------------------------------------------------------- */
+/* -------------------------------------------------------------- */
+/* -------------------------------------------------------------- */
+
+
 
 
 
@@ -80,27 +96,25 @@
 @media screen and (min-width: 400px){
   .body_cls_body{
       display: grid;
-      grid-template-columns: minmax(50px,1fr) minmax(2fr,auto) minmax(50px,1fr);
-      grid-template-rows: minmax(100px,1fr) minmax(250px,auto) minmax(50px,100px);
+      grid-template-columns: auto;
+      grid-template-rows: auto minmax(250px,auto) minmax(50px,100px);
       grid-template-areas:
-      "header header header"
-      "mainbody mainbody mainbody"
-      "footer footer footer" ;
-      grid-row-gap: 2em;
-
+      "header "
+      "mainbody "
+      "footer " ;
   }
 
 
 .header_cls_header{
   grid-area: header ;
-  display: grid;
-  grid-column: 1fr 3fr 1fr ;
-}
+  height: 100px;
+  }
 .main_cls_mainbody{
   grid-area: mainbody ;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  margin-top: 2% ;
 }
 .footer_cls_footer{
   grid-area: footer ;
@@ -110,37 +124,27 @@
   justify-content: flex-end;
 }
 
-.div_cls_notification{
-  overflow-x: scroll;
-  width: 100px;
-  background-color: orange;
-  grid-column: 1/2;
-  }
-.div_cls_brandheader{
-  width: 500px;
-  background-color: blue;
-grid-column: 2/3;
-}
-.div_cls_share{
-  background-color: brown;
-  grid-column: 3/4;
-}
 .div_cls_sidebar{
   width: 50px;
   background-color: skyblue;
   margin-left: -70px;
 }
-.div_cls_track_work{
-  width: 400px;
-  background-color: pink;
+.div_cls_work{
+  width: 40%;
+  height: 100% ;
+  /* background-color: rgb(249, 244, 239); */
+  border: 1px solid rgb(175, 168, 168);
+  border-radius: 5px;
+  box-shadow: 0px 2px 3px 1px #888888;
+  z-index: -5 ;
 }
-.div_cls_new_work{
-  width: 400px;
-  background-color: green;
-}
+
 .div_cls_chatbox{
   width: 200px;
   height: 50px;
   background-color: violet;
+  visibility: hidden;
 }
+
+
 }
