@@ -85,8 +85,9 @@ location.href="../pages/mainpage.html";
 
 //menu bar logic starts here
 
-
-function toggle() {
+//getting the menu arrow div  element
+var menu_div = document.getElementById('div_id_arrow')
+menu_div.onclick = function() {
   var el = document.querySelector('#div_id_menu');
   var real = el.getAttribute("class");
   var right = document.querySelector('#icon_id_arrow');

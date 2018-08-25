@@ -3,14 +3,14 @@
   padding: 0px;
 }
 
-.fa-chevron-up{
+.icon_cls_menu_arrow_in{
   font-size: 35px;
 }
-.fa-chevron-down{
+.icon_cls_menu_arrow_out{
   font-size: 35px;
 }
 
-#menu {
+#div_id_menu {
   position: fixed;
   display: inline;
   position: fixed;
@@ -19,7 +19,7 @@
 
 }
 
-#arrow{
+#div_id_menu{
   color: white;
 position: fixed;
 background-color: red;
@@ -53,7 +53,7 @@ border-top-left-radius: 50px;
   border-bottom: 0px;
 }
 
-.showUp, .hideDown{
+.icon_cls_menu_arrow_in, .icon_cls_menu_arrow_out{
     /* we specify the transition length for hiding and showing */
             transition: all .3s ease-in;
 }
