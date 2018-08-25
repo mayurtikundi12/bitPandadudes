@@ -1,0 +1,129 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+.fa-chevron-right{
+  font-size: 35px;
+  /* transform: rotateY(180deg); */
+}
+.fa-chevron-left{
+  font-size: 35px;
+}
+
+
+
+#menu {
+  position: fixed;
+  display: inline;
+  position: fixed;
+  top:50%;
+  transform: translate(0 , -50%);
+}
+
+#arrow {
+  z-index: 1;
+  color: white;
+  position: fixed;
+  float: right;
+display: inline;
+top:50%;
+transform: translate(0 , -50%);
+background-color: #E91E63;
+padding: 8px;
+padding-left: 0px;
+border-top-right-radius: 50px;
+border-bottom-right-radius: 50px;
+}
+
+.btn_ul li {
+  list-style: none;
+  padding: 5px;
+  border-bottom: 1px solid #858fa6;
+  color: black;
+}
+.btn_ul li:nth-child(6){
+  border-bottom: 0px;
+}
+.link {
+  width: 90px;
+  position: relative;
+  display: inline-block;
+  float: left;
+  background-color: rgb(68, 217, 43);
+  border-radius: 3px;
+}
+
+.show, .hide{
+    /* we specify the transition length for hiding and showing */
+            transition: left .3s ease-in;
+}
+.hide {
+  left: -90px;
+}
+.show {
+  left: 0px;
+}
+
+/*
+.showUp, .hideDown{
+            transition: all .3s ease-in;
+}
+.hideDown {
+  bottom:-161px;
+}
+.showUp {
+  bottom: 0px;
+} */
+
+
+/* Samsung Galaxy S5 -----------  */
+ @media only screen and (min-device-width: 360px)
+and (max-device-height: 800px)
+and (orientation : landscape)
+and (-webkit-device-pixel-ratio: 3){
+
+
+  .show, .hide{
+      /* we specify the transition length for hiding and showing */
+              transition: left .3s ease-in;
+  }
+  .hide {
+      bottom:-161px;
+  }
+  .show {
+    bottom: 0px;
+  }
+/*
+  .fa-chevron-up{
+    font-size: 35px;
+  }
+  .fa-chevron-down{
+    font-size: 35px;
+  }
+
+ #menu {
+   left: 50%;
+   transform: translateX(-50%);
+     text-align: center;
+     top: 0%;
+ }
+
+#arrow {
+float: none;
+display: none;
+  transform: translate(-50%,0);
+  top: -18%;
+  left: 50%;
+ padding: 10px;
+ padding-top: 0px;
+  border-bottom-right-radius: 0px;
+ border-top-right-radius: 50px;
+ border-top-left-radius: 50px;
+}
+.link {
+  z-index: 2;
+  border-radius: 5px;
+}
+
+} */

@@ -1,48 +1,65 @@
-.fa {
-  position: relative;;
-  font-size: 40px;
-  float: left;
+* {
+  margin: 0px;
+  padding: 0px;
 }
 
-.btn {
-  width: 70px;
-  list-style: none;
-  padding: 5px;
-  border-bottom: 1px solid #858fa6;
-  color: white;
+.fa-chevron-up{
+  font-size: 35px;
+}
+.fa-chevron-down{
+  font-size: 35px;
+}
+
+#menu {
+  position: fixed;
+  display: inline;
+  position: fixed;
+  left: 50%;
+  transform: translate(-50% , 0);
+
 }
 
 #arrow{
-  float: right;
-  position: relative;
-  padding-top: 50%;
-
-}
-#menu {
+  color: white;
 position: fixed;
-height: 50px;
-width: 150px;
-top: 40%;
+background-color: red;
+top: -18%;
+left: 50%;
+transform: translate(-50%,0);
+padding: 10px;
+padding-top: 0px;
+border-top-right-radius: 50px;
+border-top-left-radius: 50px;
+/* z-index: -1; */
 
 }
 
-ul {
-  border-radius: 3px;
-  background-image: radial-gradient(circle 248px at center, #16d9e3 0%, #30c7ec 47%, #46aef7 100%);
+.btn_ul li {
+  list-style: none;
+  padding: 5px;
+  border-bottom: 1px solid #858fa6;
+  color: black;
 }
 .link {
+  width: 90px;
+  position: relative;
+  display: inline-block;
   float: left;
-  height: 140px;
+  background-color: rgb(68, 217, 43);
+  border-radius: 5px;
+  z-index: 2;
+}
+.btn_ul li:nth-child(6){
+  border-bottom: 0px;
 }
 
-.show, .hide{
+.showUp, .hideDown{
     /* we specify the transition length for hiding and showing */
-            transition: left .2s ease-in;
-
+            transition: all .3s ease-in;
 }
-.hide {
-  left: -120px;
+.hideDown {
+  bottom:-161px;
 }
-.show {
-  left: -40px;
+.showUp {
+  bottom: 0px;
 }
