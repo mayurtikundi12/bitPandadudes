@@ -15,16 +15,12 @@
 .profile_container h4 {
   font-family: 'Courgette', cursive;
   font-weight: normal;
-
-
-
 }
 
  img[alt="profile_image"]{
    height: 150px;
    width: 150px;
    border-radius: 50%;
-
  }
 
 .profile_container{
@@ -80,6 +76,7 @@ border-bottom: 1px solid rgb(37, 247, 58);
   color: rgb(60, 86, 219);
   font-size: 12px;
   font-weight: bold;
+  transition: all 1s ;
 }
 
 
