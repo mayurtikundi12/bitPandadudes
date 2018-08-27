@@ -18,41 +18,12 @@
   }
   .header_cls_header {
     grid-area: header;
-    display: grid;
-    grid-template-columns: 50px auto 50px;
-    justify-content: space-between;
-    grid-template-areas:
-     "notification brand share"
-
-  }
+ }
   .main_cls_mainbody {
     grid-area: mainbody;
-    display: grid;
-    grid-template-columns: 280px ;
-    grid-template-rows: auto ;
-    grid-template-areas:
-    "features " ;
-    justify-content: center;
   }
   .footer_cls_footer {
     grid-area: footer;
-    display: grid ;
-    grid-template-columns: 2fr 1fr ;
-    grid-template-rows: 50px ;
-    grid-template-areas:
-    "bottombar chatbox "
-  }
-  .div_cls_notification {
-    grid-area: notification;
-  }
-  .div_cls_brandheader{
-    grid-area: brand;
-  }
-  .div_cls_share {
-    grid-area: share;
-  }
-  .div_cls_sidebar {
-    grid-area: bottombar;
   }
 
   .div_cls_account_features {
@@ -107,91 +78,72 @@
 /* desktop view starts here */
 @media screen and (min-width: 400px) {
 .body_cls_body {
-  background-color: green;
   display: grid;
-  grid-template-columns: 50px auto 50px;
+  grid-template-columns: auto;
   grid-template-rows: 50px minmax(295px, auto) 40px;
-  grid-template-areas: "header header header" "mainbody mainbody mainbody" "footer footer footer";
+  grid-template-areas: "header" "mainbody" "footer";
   grid-gap: 5px;
 }
 
 .header_cls_header {
   grid-area: header;
-  display: grid;
-  grid-template-columns: 50px auto 50px;
-  justify-content: space-between;
-  grid-template-areas: "notification brand share";
 }
 
 .main_cls_mainbody {
   grid-area: mainbody;
-  display: grid;
-  grid-template-columns: 50px 1fr;
-  grid-template-rows: auto;
-  grid-template-areas: ". features" ". features";
-  grid-gap: 5px;
 }
 
 .footer_cls_footer {
   grid-area: footer;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-areas: "foot";
-  justify-items: end;
-  align-items: end;
 }
 
-.div_cls_notification {
-  overflow-x: scroll;
-  width: 100px;
-  background-color: orange;
-  grid-area: notification;
-}
-
-.div_cls_brandheader {
-  width: 500px;
-  background-color: blue;
-  grid-area: brand;
-}
-
-.div_cls_share {
-  background-color: brown;
-  width: 100px;
-  grid-area: share;
-}
 
 .div_cls_account_features {
-  grid-area: features;
+  height: 100%;
   display: grid;
-  grid-template-columns: 50px 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  grid-template-areas:
-   ". myorder security"
-   ". mywallet profileinfo";
+  grid-template-columns: 1fr 1fr ;
+  grid-template-rows:1fr 1fr ;
+  align-items: center;
   justify-items: center;
-  grid-gap: 5px;
+
 }
 
 .div_cls_account_feature_single {
-  width: 100px;
-  height: 100px;
-  background-color: red;
+  background-color: rgb(244, 246, 249);
+  position: relative;
+  width: 10rem;
+  height: 10rem;
   text-align: center;
+  margin-top: 5% ;
+  margin-bottom: 5% ;
+  align-self: center;
+  border-radius: 20px 20px 20px 0px ;
+  -webkit-box-shadow: -3px 11px 19px -1px rgba(0,0,0,0.75);
+  -moz-box-shadow: -3px 11px 19px -1px rgba(0,0,0,0.75);
+  box-shadow: -3px 11px 19px -1px rgba(0,0,0,0.75);
+padding: 2%;
+
+}
+
+.div_cls_account_feature_single:hover{
+  -webkit-box-shadow: -3px 16px 35px -1px rgba(255,0,0,0.75);
+-moz-box-shadow: -3px 16px 35px -1px rgba(255,0,0,0.75);
+box-shadow: -3px 16px 35px -1px rgba(255,0,0,0.75);
 }
 
 #div_id_account_feature_order {
-  grid-area: myorder;
+
 }
 
 #div_id_account_feature_wallet {
-  grid-area: mywallet;
+
 }
 
 #div_id_account_feature_profile {
-  grid-area: profileinfo;
+
 }
 
 #div_id_account_feature_security {
-  grid-area: security;
+
 }
 }

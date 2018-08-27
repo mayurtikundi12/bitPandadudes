@@ -9,7 +9,7 @@
 
   <link rel="stylesheet" href="../styles/header_only.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
-  <link  rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+  <link  rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous"> -->
 
 </head>
 
@@ -64,7 +64,6 @@
       <div id="div_id_arrow">
         <div class="btn_circle">
           <span id="icon_id_arrow" class=" fa fa-chevron-right" ></i>
-          <!-- <i class="fa fa-chevron-up" ></i> -->
         </div>
       </div>
       </div>
@@ -73,9 +72,9 @@
     <!-- form div starts here for new work details  -->
     <div class="div_cls_newwork">
       <div class="div_cls_form_steps">
-        <button class="btn_cls_form_step" type="button" name="btn_form_step">step1</button>
-        <button type="btn_cls_form_step" name="btn_form_step">step2</button>
-        <button type="btn_cls_form_step" name="btn_form_step">step3</button>
+        <button class="btn_cls_form_step " id="btn_id_form_step1"  name="btn_form_step">STEP1</button>
+        <button class="btn_cls_form_step " id="btn_id_form_step2" name="btn_form_step">STEP2</button>
+        <button class="btn_cls_form_step " id="btn_id_form_step3" name="btn_form_step">STEP3</button>
       </div>
 
       <!-- actual form starts here -->
@@ -84,43 +83,58 @@
         <!-- div for step 1 form details gathering starts here -->
         <div class="div_cls_form" id="div_id_form_step1">
           <!-- work title -->
-          <label for="work_title">Work Title</label>
-          <input type="text" id="inp_id_work_title" name="work_title" value="work_title">
 
+          <div class="div_cls_input_container">
+          <label class="form_cls_element label" for="work_title">Work Title</label>
+          <input class="form_cls_element input" type="text" id="inp_id_work_title" name="work_title" value="" placeholder="project title">
+          </div>
           <!-- work expected time deadline -->
-          <label for="work_deadline">Work Deadline</label>
-          <input type="date"id="inp_id_work_deadline" name="work_deadline">
+          <div class="div_cls_input_container">
+          <label class="form_cls_element label" for="work_deadline">Work Deadline</label>
+          <input class="form_cls_element input" type="date"id="inp_id_work_deadline" name="work_deadline">
+          </div>
 
           <!-- work submission url -->
-          <label for="work_submission_url">Work Submission URL</label>
-          <input type="url" id="inp_id_work_submission_url" name="work_submission_url">
+          <div class="div_cls_input_container"><label class="form_cls_element label" for="work_submission_url">Work Submission URL</label>
+          <input class="form_cls_element input" type="url" id="inp_id_work_submission_url" name="work_submission_url">
+        </div>
         </div>
         <!-- div for step 1 form details gathering ends here -->
+
 
 
         <!-- div for step 2 form details gathering starts here -->
         <div class="div_cls_form" id="div_id_form_step2">
 
           <!-- work details -->
-          <label for="work_details">Work Details</label>
-          <textarea name="work_details" id="inp_id_work_details" placeholder="please write complete details"></textarea>
-
-          <!-- work upload related files -->
-          <p>uplaod project related files or study material</p>
-          <label for="work_file upload">Uplaoad</label>
-          <input type="file" id="inp_id_upload_file" name="upload">
+          <div class="div_cls_input_container">
+            <label class="form_cls_element label" for="work_details">Work Details</label>
+          <textarea class="form_cls_element input" name="work_details" id="inp_id_work_details" placeholder="please write complete details"></textarea>
         </div>
+          <!-- work upload related files -->
+          <div class="div_cls_input_container" id="ptext">
+            <p class="form_cls_element" id="p_id_text" >uplaod project related files or study material</p>
+          </div>
+            <div class="div_cls_input_container ">
+              <label class="form_cls_element label" for="work_file upload">Uplaoad</label>
+            <input class="form_cls_element input" type="file" id="inp_id_upload_file" name="upload">
+          </div>
+
+
+      </div>
         <!-- div for step 2 form details gathering ends here -->
 
         <!-- div for step 3 form details gathering starts here -->
         <div class="div_cls_form" id="div_id_form_step3">
           <!-- work special reuirements -->
-          <label for="work_special_request">Special Requests</label>
-          <textarea id="inp_id_special_request" name="work_special_request" placeholder="please write any special requirements that you want to benefit"></textarea>
+          <div class="div_cls_input_container laststep">
+            <label class="form_cls_element label" for="work_special_request">Special Requests</label>
+          <textarea class="form_cls_element input" id="inp_id_special_request" name="work_special_request" placeholder="please write any special requirements that you want to benefit"></textarea>
         </div>
+      </div>
         <!-- div for step 3 form details gathering ends here -->
 
-        <button type="submit" name="sumbit_work" id="btn_id_submit_newwork">next</button>
+        <button type="submit" name="sumbit_work" id="btn_id_submit_newwork">NEXT</button>
       </form>
       <!-- actual form ends here -->
     </div>

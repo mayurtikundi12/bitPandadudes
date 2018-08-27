@@ -1,200 +1,257 @@
-.body_cls_body{
-  width: 100% ;
+.body_cls_body {
+  width: 100%;
   text-align: center;
 }
 
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
 /* mobile view design */
+
 @media screen and (max-width: 400px) {
   .body_cls_body {
     background-color: yellow;
     display: grid;
-    grid-template-columns:auto;
+    grid-template-columns: auto;
     grid-template-rows: minmax(100px, 1fr) minmax(200px, auto) minmax(50px, 1fr);
-    grid-template-areas:
-    "header"
-    "mainbody "
-    "footer ";
+    grid-template-areas: "header" "mainbody " "footer ";
   }
   .header_cls_header {
     grid-area: header;
     display: grid;
     grid-template-columns: 50px 150px 50px;
     height: 50px;
-    grid-template-areas:
-    "notification brand share" ;
-     height: 20px ;
-     justify-content: space-between;
-     justify-items: center;
-
-
+    grid-template-areas: "notification brand share";
+    height: 20px;
+    justify-content: space-between;
+    justify-items: center;
   }
-  .main_cls_mainbody {
-    grid-area: mainbody;
-    display: grid;
-    grid-template-columns: 280px ;
-    grid-template-rows: auto ;
-    grid-template-areas:
-    " newworkform " ;
-    justify-content: center;
-    }
+  .main_cls_mainbody {}
   .footer_cls_footer {
     grid-area: footer;
-    display: grid ;
-    grid-template-columns: 2fr 1fr ;
-    grid-template-rows: 50px ;
-    grid-template-areas:
-    "bottombar chatbox "
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 50px;
+    grid-template-areas: "bottombar chatbox "
   }
   .div_cls_notification {
     grid-area: notification;
-    width: 50px ;
+    width: 50px;
   }
-  .div_cls_brandheader{
+  .div_cls_brandheader {
     grid-area: brand;
-    width: 100px ;
+    width: 100px;
     background-color: red;
-
   }
   .div_cls_share {
     grid-area: share;
   }
-  .div_cls_sidebar {
-    grid-area: bottombar;
-  }
-  .div_cls_form_steps{
+  .div_cls_form_steps {
     grid-area: button;
     display: flex;
     flex-direction: row;
     /* justify-content: space-around; */
   }
-  .form_cls_newwork{
+  .form_cls_newwork {
     grid-area: newworkform;
-    font-size: 10px ;
+    font-size: 10px;
     display: grid;
     grid-template-columns: 300px;
     grid-template-rows: 50px auto;
-    grid-template-areas:
-    " stepbutton "
-    " form " ;
+    grid-template-areas: " stepbutton " " form ";
     justify-items: center;
-
   }
-  .div_cls_form_steps{
+  .div_cls_form_steps {
     grid-area: stepbutton;
-      }
-  .form_cls_newwork{
+  }
+  .form_cls_newwork {
     grid-area: form;
-    }
-
-  .div_cls_chatbox{
+  }
+  .div_cls_chatbox {
     width: 100px;
     height: 30px;
     background-color: pink;
   }
-
 }
-
-
-
-
 
 /* --------------------------------------------------------------- */
 
-
-
-
-
-
 /* desktop view starts here */
-@media screen and (min-width: 400px){
-  .body_cls_body{
-      display: grid;
-      grid-template-columns: 50px auto 50px;
-      grid-template-rows: 50px minmax(295px,auto) 40px;
-      grid-template-areas:
-      "header header header"
-      "mainbody mainbody mainbody"
-      "footer footer footer" ;
-      grid-row-gap: 5px;
 
+@media screen and (min-width: 400px) {
+  .body_cls_body {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 50px auto 40px;
+    grid-template-areas: "header" "mainbody" "footer";
+  }
+  #p_id_text {
+    margin-bottom: 0px;
+  }
+  #inp_id_upload_file {
+    border-bottom: none;
+  }
+  .header_cls_header {
+    grid-area: header;
+  }
+  .main_cls_mainbody {
+    grid-area: mainbody;
+    margin-top: 0.5%;
+  }
+  .footer_cls_footer {
+    grid-area: footer;
+  }
+  .div_cls_newwork {
+    width: 50%;
+    height: 20rem;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    -webkit-box-shadow: -1px 20px 31px 1px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -1px 20px 31px 1px rgba(0, 0, 0, 0.75);
+    box-shadow: -1px 20px 31px 1px rgba(0, 0, 0, 0.75);
+    margin-top: 1rem;
+    border-radius: 10px;
+  }
+  .div_cls_form_steps {
+    height: 1rem;
+    padding: 1rem;
+  }
+  .form_cls_newwork {
+    position: relative;
+    border-top: 2px solid red;
+    padding-top: 5%;
+  }
+  .div_cls_form {
+    position: absolute;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    height: 75%;
+    background-color: rgb(227, 235, 247);
+    border-radius: 5px;
   }
 
-
-.header_cls_header{
-  grid-area: header ;
-  display: grid;
-  grid-template-columns: 50px auto 50px;
-  justify-content: space-between;
-  grid-template-areas:
-  "notification brand share"
-}
-.main_cls_mainbody{
-  grid-area: mainbody ;
-  display: grid;
-  grid-template-columns: 50px auto;
-  grid-template-rows: 40px auto;
-  grid-template-areas:
-  "sidebar newwork"
-  "sidebar newwork";
-
-}
-.footer_cls_footer{
-  grid-area: footer ;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-areas:
-  "foot";
-  justify-items:end;
-  align-items: flex-end;
-}
-
-.div_cls_notification{
-  overflow-x: scroll;
-  width: 100px;
-  background-color: orange;
-grid-area: notification;
+  .div_cls_form:hover {
+    -webkit-box-shadow: -1px 8px 20px -5px rgba(9, 232, 225, 1);
+    -moz-box-shadow: -1px 8px 20px -5px rgba(9, 232, 225, 1);
+    box-shadow: -1px 8px 20px -5px rgba(9, 232, 225, 1);
   }
-.div_cls_brandheader{
-  width: 500px;
-  background-color: blue;
-  grid-area: brand;
 
+  .div_cls_input_container {
+    display: flex;
+    flex-direction: row;
+    float: left;
+    width: 100%;
+  }
+  .form_cls_element {
+    padding: 2%;
+    margin-top: 5%;
+  }
+  .label {
+    text-align: left;
+    font-size: 0.8rem;
+    word-break: normal;
+    width: 40%;
+  }
+  .input {
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    border-bottom: 1px solid black;
+    height: 1rem;
+    width: 50%;
+    font-size: 0.9rem;
+  }
+  .input:hover {
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    border-bottom: 2px solid rgb(16, 255, 0);
+    height: 1rem;
+    width: 50%;
+    font-size: 0.9rem;
+    transform: scale(1.02);
+    transition: all 1s;
+  }
+  #div_id_form_step1 {}
+  #div_id_form_step2 {}
+  #div_id_form_step3 {}
+  .div_cls_chatbox {
+    width: 200px;
+    height: 30px;
+    background-color: pink;
+    visibility: hidden;
+  }
+  #btn_id_submit_newwork {
+    position: relative;
+    margin-top: 190px;
+    height: 10%;
+    width: 25%;
+    padding: 1.5%;
+    border: none;
+    border-radius: 15px;
+    background: rgb(86, 255, 111);
+    color: white;
+    bottom: -10px;
+  }
+  .btn_cls_form_step {
+    width: 20%;
+    margin-left: 1%;
+    margin-right: 1%;
+    background: red;
+    border: 0px;
+    padding: 1%;
+    color: white;
+    border-radius: 5px;
+  }
+  .btnfocus {
+    transition: all 1s;
+    background-color: green;
+  }
+  @keyframes in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes out {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      transform: translateX(-500px);
+    }
+  }
+  .animatein {
+    position: absolute;
+    clear: all;
+    animation-name: in;
+    animation-duration: 1s;
+    transform-origin: centre;
+  }
+  .animateout {
+    position: absolute;
+    clear: all;
+    animation-name: out;
+    animation-duration: 1s;
+    transform-origin: centre;
+    /* transition: animation-name 1s ease-in 0.5s; */
+  }
+#ptext{
+  padding: 0px ;
+  font-size: 0.9rem ;
+  text-align: center;
+  margin-bottom: px ;
 }
-.div_cls_share{
-  background-color: brown;
-  width: 100px;
-  grid-area: share;
+.laststep{
+  height: 80% ;
 }
-.div_cls_sidebar{
-  width: 50px;
-  background-color: skyblue;
-}
-.div_cls_newwork{
-  grid-area:newwork;
-  display: grid;
-  grid-template-columns: auto;
-  grid-template-rows:  auto;
-  grid-template-areas:
-  "button"
-  "form";
-  justify-content: center;
-}
-.div_cls_form_steps{
-  grid-area: button;
-
-  /* justify-content: space-around; */
-}
-.form_cls_newwork{
-  grid-area: form;
-}
-
-
-.div_cls_chatbox{
-  width: 200px;
-  height: 30px;
-  background-color: pink;
-}
-#btn_id_submit_newwork{
-  
+#inp_id_special_request{
+  height: 50px ;
 }
 }
