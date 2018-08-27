@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css?family=Courgette');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+
+}
+
+.profile_image {
+  margin-left: 50%;
+  transform: translate(-50% , 0);
+}
+.profile_container h4 {
+  font-family: 'Courgette', cursive;
+  font-weight: normal;
+
+
+
+}
+
+ img[alt="profile_image"]{
+   height: 150px;
+   width: 150px;
+   border-radius: 50%;
+
+ }
+
+.profile_container{
+  position: absolute;
+  left: 50%;
+  top:50%;
+transform: translate(-50% , -50%);
+box-shadow: 0px 7px 15px 3px rgba(0, 0, 0, .24);
+padding: 30px;
+width: 400px;
+background-color: white;
+border: 1px solid rgba(0,0,0,0.2);
+
+}
+.education_details_form{
+  display: none;
+}
+.form_heading{
+ margin-bottom: 25px;
+ font-size: 18px;
+}
+.profile_container input {
+  padding: 7px 0 ;
+  margin-bottom: 30px;
+  width: 100%;
+  outline: none;
+  border: none;
+border-bottom: 1px solid rgb(37, 247, 58);
+
+}
+
+.profile_container form div {
+  position: relative;
+}
+
+.profile_container form label{
+  position: absolute;
+  opacity: .5;
+  top: 10px;
+  left: 0;
+  transition: all .3s;
+  pointer-events: none;
+  font-family: 'Courgette', cursive;
+
+
+}
+
+.profile_container input:focus ~ label {
+  left: 0;
+  opacity: .8;
+  top: -10px;
+  /* color: rgb(84, 228, 237); */
+  color: rgb(60, 86, 219);
+  font-size: 12px;
+  font-weight: bold;
+}
+
+
+button[type="submit"],[name="next"] , [name="back"]{
+  color: white;
+  margin-top: 20px;
+  margin-bottom: 0;
+  width: 80px;
+  height: 25px;
+  cursor: pointer;
+  float: right;
+  border-radius: 15px;
+  background-color: rgb(99, 215, 44);
+  border: none;
+  outline: none;
+  text-transform: uppercase;
+  box-shadow: 0px 7px 15px 3px rgba(0, 0, 0, .24);
+
+}
+
+button[name="back"] {
+  float: left;
+}

@@ -1,0 +1,197 @@
+*{
+  margin: 0px;
+  padding: 0px;
+  /* box-sizing: border-box; */
+}
+html , body {
+  height: 100%;
+}
+
+.login_container {
+
+  /* background-color: red; */
+  position: absolute;
+  transform: translate(-50%,0);
+  top: 20%;
+  width: 40%;
+  height:70%;
+  background: white;
+  left: 50%;
+  border-radius: 5px;
+  box-shadow: 0px 7px 15px 3px rgba(0, 0, 0, .24);
+
+  }
+
+
+
+/* .login_container {
+  position: absolute;
+  display: block;
+  width: 90%;
+  height: 80%;
+  left: 5%;
+
+} */
+
+.login_form {
+  display:none;
+  /* background-color: green; */
+  /* height: 80%; */
+  width: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  left: 50%;
+  text-align: center;
+
+
+}
+.signup_form {
+  /* display: none; */
+ width: 50%;
+ position: relative;
+ top: 50%;
+ transform: translate(-50%,-50%);
+ left: 50%;
+ text-align: center;
+
+}
+
+
+
+input {
+  width: 100%;
+  margin-top: 20px;
+  /* padding-bottom: 20px; */
+  display: block;
+  height: 40px;
+  /* padding: 10px; */
+  /* border-image-source: linear-gradient(rgba(0, 51, 102, 0.5), rgba(0, 0, 51, 0.5)); */
+  outline: none;
+  border: 0px;
+  border-bottom: 1px solid grey;
+  }
+
+  .login_btn {
+    color: white;
+    margin-top: 60px;
+    width: 50%;
+    min-width: 80px;
+    height: 40px;
+    border-radius: 20px;
+    border: 0px;
+    outline: none;
+background-image: linear-gradient(to right, #ec77ab 0%, #7873f5 100%);
+/* box-shadow: 0px 7px 15px 3px rgba(0, 0, 0, .24); */
+box-shadow: 0 10px 30px 0px rgba(189, 89, 212, 0.5);
+-moz-box-shadow: 0 10px 30px 0px rgba(189, 89, 212, 0.5);
+-webkit-box-shadow: 0 10px 30px 0px rgba(189, 89, 212, 0.5);
+-o-box-shadow: 0 10px 30px 0px rgba(189, 89, 212, 0.5);
+-ms-box-shadow: 0 10px 30px 0px rgba(189, 89, 212, 0.5);
+}
+
+.signup_btn{
+  color: white;
+  margin-top: 40px;
+  width: 50%;
+  min-width: 80px;
+  height: 40px;
+  border-radius: 20px;
+  border: 0px;
+  outline: none;
+background-image: linear-gradient(to right, #ec77ab 0%, #7873f5 100%);
+/* box-shadow: 0px 7px 15px 3px rgba(0, 0, 0, .24); */
+box-shadow: 0 10px 30px 0px rgba(189, 89, 212, 0.5);
+-moz-box-shadow: 0 10px 30px 0px rgba(189, 89, 212, 0.5);
+-webkit-box-shadow: 0 10px 30px 0px rgba(189, 89, 212, 0.5);
+-o-box-shadow: 0 10px 30px 0px rgba(189, 89, 212, 0.5);
+-ms-box-shadow: 0 10px 30px 0px rgba(189, 89, 212, 0.5);
+
+}
+
+/* hover not working........... */
+  button:hover {
+  	cursor: pointer;
+  }
+.signup_text {
+  font-size: 13px;
+  margin-top: 100px;
+}
+
+.login_text{
+  font-size: 13px;
+  margin-top: 50px;
+}
+.login_txt2 {
+    color: black;
+  font-weight: bold;
+  cursor: pointer;
+}
+.signup_txt2{
+  color: black;
+font-weight: bold;
+cursor: pointer;
+
+}
+
+input:focus::-webkit-input-placeholder {
+    /* font-size: .75em; */
+    position: relative;
+    top: -15px;
+color: rgb(117, 221, 244);
+
+    transition: 0.2s ease-out;
+}
+
+input::-webkit-input-placeholder {
+
+    transition:all 0.2s ease-in;
+}
+
+input[type="text"]:focus, input[type="password"]:focus {
+  opacity: 1;
+    transition: 0.2s ease-in;
+}
+
+input[type="text"], input[type="password"] {
+
+    transition: 0.2s ease-in;
+}
+
+
+
+ /* Custom, iPhone Retina */
+     @media only screen and (max-width : 320px) {
+       /* .login_container {
+          top: 5%;
+          width: 80%;
+          height: 80%;
+        } */
+     }
+
+     /* Extra Small Devices, Phones */
+     @media screen and (max-width : 800px) {
+
+       .login_container {
+         background-color: green;
+
+          width: 80%;
+          /* height: 80%; */
+
+        }
+        /* .login_form{
+            height: 80%;
+            top: 20%;
+        } */
+     }
+
+     /* Small Devices, Tablets */
+     /* @media screen and (max-width : 768px) {
+       .login_container {
+          top: 50%;
+          width: 80%;
+          height: 90%;
+
+          transform: translate(-50%,-50%);
+        }
+     } */

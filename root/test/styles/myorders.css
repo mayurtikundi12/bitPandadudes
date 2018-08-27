@@ -144,3 +144,12 @@
 .div_cls_order_table{
   grid-area: ordertable;
 }
+
+table  {
+border: 1px solid red;
+}
+
+td {
+  border: 1px solid red;
+
+}
