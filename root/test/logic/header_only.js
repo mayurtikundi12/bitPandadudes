@@ -1,4 +1,54 @@
+//----------------------------------------------------------------------------------
+var header = document.querySelector('header');
+console.log(header);
+header.innerHTML = `    <!-- the notification option starts here  -->
 
+    <div class="div_cls_notification" id="div_id_notification">
+    <a href="#"> <i class="zmdi zmdi-notifications"></i></a>
+    <span class="badge" id="span_id_badge_notification">99</span>
+    </div>
+    <div id="div_id_notification_wrapper">
+    </div>
+    <!-- the notification option ends here  -->
+
+    <!-- the brand name div starts here -->
+    <div class="div_cls_brandheader" id="div_id_brandheader">
+      <p id="p_id_brandheader" class="p_cls_brandname">Pandadudes</p>
+    </div>
+    <!-- the brand name div ends here -->
+
+    <!-- the share div starts here -->
+    <div class="div_cls_share" id="div_id_share">
+      <i class="zmdi zmdi-share"></i>
+      <a href="#"><i class="zmdi zmdi-twitter"></i> </a>
+      <a href="#"><i class="zmdi zmdi-facebook"></i> </a>
+      <a href="#"><i class="zmdi zmdi-instagram"></i> </a>
+      <a href="#"><i class="zmdi zmdi-youtube"></i> </a>
+    </div>
+    <!-- the share div ends here -->
+`
+
+
+//--------------------------------------------------------------------------------
+var sidebar = document.getElementById('div_id_menu');
+sidebar.innerHTML = `    <div class="link">
+    <ul class="btn_ul">
+      <li>Home</li>
+      <li>Account</li>
+      <li>About us</li>
+      <li>Contact us</li>
+      <li>About us</li>
+      <li>Contact us</li>
+    </ul>
+  </div>
+
+  <div id="div_id_arrow">
+    <div class="btn_circle">
+      <span id="icon_id_arrow" class=" fa fa-chevron-right"></i>
+      <!-- <i class="fa fa-chevron-up" ></i> -->
+    </div>
+  </div>
+  `
 //------------------------------------------------------------------------------
 
 //starting from the top (header)
@@ -99,5 +149,4 @@ menu_div.onclick = function() {
     el.setAttribute("class" , "div_cls_menu_hide");
     right.setAttribute("class" , "fa fa-chevron-right");
   }
-
 }

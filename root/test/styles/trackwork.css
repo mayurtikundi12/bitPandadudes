@@ -1,5 +1,6 @@
 .body_cls_body{
   width: 100% ;
+  height: 100%;
   text-align: center;
 
 }
@@ -68,8 +69,6 @@
     grid-area: details ;
   }
   .div_cls_progress_inner_details{
-    width: 100px;
-    height: 100px;
     background-color: red;
   }
   .div_cls_chatbox {
@@ -89,74 +88,89 @@
 
 
 .body_cls_body{
-      display: grid;
-      grid-template-columns:auto;
-      grid-template-rows: 50px minmax(250px,auto) 50px;
-      grid-template-areas:
-      " header"
-      "  mainbody"
-      "  footer" ;
-      grid-row-gap: 5px;
 
   }
 
 .header_cls_header{
-  grid-area: header ;
-  display: grid;
-  grid-template-columns: 1fr 5fr 1fr ;
-  grid-template-areas:
-  "notification brand share" ;
-  justify-content: space-between;
+
 }
 .main_cls_mainbody{
-  grid-area: mainbody ;
-  display: grid;
-  grid-template-columns: auto;
-  grid-template-rows: 1fr  auto ;
-  grid-template-areas:
-  "progressinfo"
-  "details";
-  justify-items:center;
+min-height:300px  ;
+margin-bottom: 10% ;
 }
 .footer_cls_footer{
-  grid-area: footer ;
   }
 
-.div_cls_notification{
-  overflow-x: scroll;
-  width: 100px;
-  background-color: orange;
-  grid-area: notification;
+.div_cls_progress_container{
+  position: relative;
+  width: 80% ;
+  min-height: 300px ;
+  margin-left: 50% ;
+  transform: translateX(-50%);
 
-  }
-.div_cls_brandheader{
-  width: 500px;
-  background-color: blue;
-  grid-area: brand;
 }
-.div_cls_share{
-  background-color: brown;
-  grid-area: share;
-}
-/* .div_cls_sidebar{
-  width: 50px;
-  background-color: skyblue;
-
-} */
 .div_cls_progress{
-  grid-area: progressinfo ;
+  margin-top: 1%;
+  margin-bottom: 3% ;
+  min-height: 50px ;
 }
+.div_cls_progress p{
+  padding: 10px ;
+}
+progress{
+  margin-top: 1% ;
+  margin-bottom: 3% ;
+  width: 70% ;
+  border-radius: 3px;
+  border: 1px solid rgb(81, 255, 93) ;
+ box-shadow: inset 0 -2px 4px rgba(255,0,0,0.4), 0 2px 5px 0px rgba(255,0,0,0.3);
+
+
+}
+progress::-moz-progress-bar { background-color: rgb(81, 255, 93); }
+progress::-webkit-progress-value { background: rgb(81, 255, 93); }
+progress { color: rgb(81, 255, 93); }
 .div_cls_progress_details{
-  grid-area: details ;
+
 }
 .div_cls_progress_inner_details{
-  width: 500px;
-  height: 200px;
-  background-color: red;
+  width: 100% ;
+  min-height: 200px ;
+  margin-top: 2% ;
+  background: rgb(222, 242, 242);
+  border-radius: 10px ;
 }
-/* .div_cls_chatbox{
-  width: 200px;
-  height: 30px;
+.div_cls_progress_inner_details:hover{
+  /* background: rgb(169, 249, 236); */
+  /* -webkit-box-shadow: 0px 0px 7px 1px rgba(19,27,247,1);
+  -moz-box-shadow: 0px 0px 7px 1px rgba(19,27,247,1);
+  box-shadow: 0px 0px 7px 1px rgba(19,27,247,1); */
+  -webkit-box-shadow: 0px 0px 7px 1.5px rgba(0,230,222,1);
+-moz-box-shadow: 0px 0px 7px 1.5px rgba(0,230,222,1);
+box-shadow: 0px 0px 7px 1.5px rgba(0,230,222,1);
+transition: all 1s ;
+}
+
+ .div_cls_progress_inner_details p{
+  padding: 2% ;
+  text-align: left;
+}
+.div_cls_progress_details button{
+  background-color: rgb(71, 255, 206) ;
+  padding: 5px ;
+  width: 25% ;
+  border: none ;
+  border-radius: 20px ;
+  color: white ;
+}
+.div_cls_progress_details button:hover{
+  background-color: rgb(2, 237, 178) ;
+  transform: scale(1.05);
+  transition: all 1s ;
+
+}
+.div_cls_chatbox{
   background-color: red;
-} */
+  display: none;
+}
 }

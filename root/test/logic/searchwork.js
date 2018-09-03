@@ -27,15 +27,15 @@ var backendobj = {array : [
   },
   {
     name:"android",
-    img : "for now lets say alt"
+    img : "for now lets say alt 2"
   },
   {
     name:"security",
-    img : "for now lets say alt"
+    img : "for now lets say alt 3"
   },
   {
     name:"ios",
-    img : "for now lets say alt"
+    img : "for now lets say alt 4"
   }
 ]} ;
 
@@ -52,10 +52,14 @@ for (var innerobj in array) {
   maindiv.appendChild(container_div);
 // creating the image tag
   var course_img = document.createElement('img');
-  course_img.setAttribute('alt',array[innerobj]['img']);
+  // course_img.setAttribute('alt',array[innerobj]['img']);
+  course_img.setAttribute('class','img_cls_service');
+
   container_div.appendChild(course_img);
 //creating the course name
   var course_name = document.createElement('p');
-  course_name.innerText = innerobj['name'] ;
+  course_name.innerText = array[innerobj]['name'] ;
+  course_name.setAttribute('class','p_cls_service_name');
+
   container_div.appendChild(course_name);
 }

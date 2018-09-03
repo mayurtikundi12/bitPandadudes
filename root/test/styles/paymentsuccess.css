@@ -82,63 +82,33 @@
 @media screen and (min-width:400px){
 
 .body_cls_body {
-  display: grid;
-  grid-template-columns: 50px auto 50px;
-  grid-template-rows: 50px minmax(295px, auto) 40px;
-  grid-template-areas: "header header header" "mainbody mainbody mainbody" "footer footer footer";
-  grid-gap: 5px;
+
 }
 
 .header_cls_header {
-  grid-area: header;
-  display: grid;
-  grid-template-columns: 50px auto 50px;
-  justify-content: space-between;
-  grid-template-areas: "notification brand share"
 }
 
 .main_cls_mainbody {
-  grid-area: mainbody;
-  display: grid;
-  grid-template-columns: 50px 1fr;
-  grid-template-rows: 150px 100px;
-  grid-template-areas:
-  ". successremark"
-   ". trackbutton";
-  grid-gap: 5px;
+
 }
 
 .footer_cls_footer {
-  grid-area: footer;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-areas: "foot";
-  justify-items: end;
-  align-items: end;
+
 }
 
-.div_cls_notification {
-  overflow-x: scroll;
-  width: 100px;
-  background-color: orange;
-  grid-area: notification;
-}
 
-.div_cls_brandheader {
-  width: 500px;
-  background-color: blue;
-  grid-area: brand;
-}
-
-.div_cls_share {
-  background-color: brown;
-  width: 100px;
-  grid-area: share;
-}
-.div_cls_success_remark{
-  grid-area: successremark;
+.div_cls_success_remark img{
+  display: block;
+  background-color: red ;
+  height: 80%;
+  width: 30% ;
 }
 .btn_cls_trackwork{
-  grid-area: trackbutton;
+  height: 30px ;
+  width: 15% ;
+  border: 1px solid black ;
+  border-radius: 15px ;
+  background-color: lightgreen ;
+  margin-top : 10% ;
 }
 }

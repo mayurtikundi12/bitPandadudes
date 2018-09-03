@@ -7,4 +7,22 @@ progress_bar.setAttribute("value","50")
 var progressamount = progress_bar.getAttribute("value");
 progress_bar_txt.innerText = "progress is "+progressamount+"%" ;
 
-console.log(progress_bar_txt);
+//placing onclick on the show details btn
+btnShow = document.getElementById('btn_id_show_details');
+//getting the inner details div
+divInnerDetails = document.getElementById('div_id_progress_inner_details')
+var isClicked = false ;
+divInnerDetails.style.visibility = 'hidden' ;
+console.log(divInnerDetails);
+btnShow.onclick = function(){
+  if(!isClicked){
+    divInnerDetails.style.visibility = 'visible' ;
+    isClicked = true ;
+    console.log('inside the if part');
+  }else{
+    divInnerDetails.style.visibility = 'hidden' ;
+    console.log('inside else part');
+isClicked = false ;
+  }
+
+}

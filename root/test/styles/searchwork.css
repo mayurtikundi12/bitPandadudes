@@ -105,87 +105,128 @@
 
 
   .body_cls_body{
-      display: grid;
-      grid-template-columns: 50px auto 50px;
-      grid-template-rows: 50px minmax(295px,auto) 40px;
-      grid-template-areas:
-      "header header header"
-      "mainbody mainbody mainbody"
-      "footer footer footer" ;
-      grid-row-gap: 5px;
-
+    width: 100% ;
+    height: 100% ;
   }
-
 
 .header_cls_header{
-  grid-area: header ;
-  display: grid;
-  grid-template-columns: 50px auto 50px;
-  justify-content: space-between;
-  grid-template-areas:
-  "notification brand share"
+
 }
 .main_cls_mainbody{
-  grid-area: mainbody ;
-  display: grid;
-  grid-template-columns: 50px auto;
-  grid-template-rows: 40px auto;
-  grid-template-areas:
-  "search search"
-  "sidebar searchresults";
 
 }
-.footer_cls_footer{
-  grid-area: footer ;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-areas:
-  "foot";
-  justify-items:end;
-  align-items: flex-end;
-}
 
-.div_cls_notification{
-  overflow-x: scroll;
-  width: 100px;
-  background-color: orange;
-grid-area: notification;
-  }
-.div_cls_brandheader{
-  width: 500px;
-  background-color: blue;
-  grid-area: brand;
-
-}
-.div_cls_share{
-  background-color: brown;
-  width: 100px;
-  grid-area: share;
-
-}
-/* .div_cls_sidebar{
-  width: 50px;
-  background-color: skyblue;
-  margin-left: -70px;
-} */
 .div_cls_search_course{
-  grid-area: search;
-  justify-self:center;
+  margin-bottom: 3% ;
+
+}
+.div_cls_search_course label,input,button{
+  display: inline-block;
+  border : 1px solid red ;
+  height: 20px ;
+  padding: 5px ;
+  }
+#label_search_course{
+  width: 15% ;
+  transform: translateY(9%);
+  font-size: 1.3rem ;
+  background: rgb(50, 242, 219) ;
+  margin-right: -4px ;
+  border-top-left-radius: 5px ;
+  border-bottom-left-radius: 5px ;
+  border : 1px solid red ;
+  color: white ;
+}
+@-moz-document url-prefix() {
+#label_search_course{
+  transform: translateY(3%);
+  font-size: 1.1rem ;
+
+  .img_cls_service{
+    content: url('https://az414406.vo.msecnd.net/img2/developer.png?v=2') ;
+    height: 100px ;
+    width: 200px ;
+    margin-bottom: 0px ;
+    border-radius:15px 15px 0px 0px ;
+    }
+}
+}
+button{
+  height: 32px ;
+  width: 12% ;
+  margin-left: -5px ;
+  border-top-right-radius: 5px ;
+  border-bottom-right-radius: 5px ;
+}
+button:hover{
+  margin-left: -4px ;
+  border-left: 1px solid red;
+  transform: scale(1.1);
+  background-color: #f2f1f0 ;
+
+}
+input{
+width: 45%;
+margin-left: -2px ;
+border-right: 0px ;
+border-left: 0px ;
 }
 .div_cls_see_courses{
-  width: 100%;
+  width: 80%;
   height: 100%;
-  background-color: skyblue;
-  grid-area: searchresults;
+  margin-left: 50% ;
+  transform: translateX(-50%);
+  background-color: rgb(237, 240, 244);
+  display: flex ;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  border-radius: 5px ;
+  margin-bottom: 10% ;
+  -webkit-box-shadow: 0px 0px 5px 2px rgba(196,190,196,1);
+  -moz-box-shadow: 0px 0px 5px 2px rgba(196,190,196,1);
+  box-shadow: 0px 0px 5px 2px rgba(196,190,196,1);
 }
 .div_cls_course_info{
-  width: 100px;
-  height: 120px;
-  background-color: red;
+  width: 25%;
+  height: 25%;
+  background-color: white;
+  margin: 3% 5% 0%;
+  border-radius: 15px 15px 15px 15px;
+  -webkit-box-shadow: 0px 2px 7px 1px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 2px 7px 1px rgba(0,0,0,0.75);
+box-shadow: 0px 2px 7px 1px rgba(0,0,0,0.75);
+}
+.div_cls_course_info:hover{
+  transform: scale(1.1);
+  -webkit-box-shadow: 0px 0px 7px 1px rgba(30,250,243,1);
+-moz-box-shadow: 0px 0px 7px 1px rgba(30,250,243,1);
+box-shadow: 0px 0px 7px 1px rgba(30,250,243,1);
+transition: all 1s ;
+}
+.div_cls_course_info:last-child{
+  margin-bottom: 2%;
+}
+.img_cls_service{
+  content:url('https://www.xda-developers.com/files/2017/05/AAEAAQAAAAAAAAg8AAAAJGFhMDRkNmMyLTY5M2EtNDgwYS1iMWE4LTk2YThkYTM0ODY4OQ.jpg');
+  height: 80% ;
+  width: 100% ;
+  margin-bottom: 0px ;
+  border-radius:15px 15px 0px 0px ;
+  }
+
+.p_cls_service_name{
+  color: blue ;
+  height: 10%;
+  padding: 5% ;
+  margin-top: -3%;
+  border-radius: 0px 0px 15px 15px ;
+  background: linear-gradient(45deg, rgba(242,0,44,1) 0%, rgba(242,0,44,1) 2%, rgba(240,156,188,1) 28%, rgba(222,36,147,1) 69%, rgba(164,114,252,1) 100%);
 }
 .div_cls_chatbox{
   width: 200px;
   height: 30px;
   background-color: pink;
+  display: none ;
 }
 }
